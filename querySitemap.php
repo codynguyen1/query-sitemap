@@ -1,5 +1,7 @@
 <?php
-require './config.php';
+echo("Starting ... ------- \n");
+echo("Loading Configs ... ------- \n");
+require 'config.php';
 $urlsFound = array();
 
 $startedOfAll = microtime(true);
@@ -10,6 +12,7 @@ foreach ($aXmlLinks as $i =>$sTmpUrl){
     $urlsFound = array_merge($urlsFound, $aTmp);
 }
 
+echo("Loaded Configs ... ------- \n");
 //find duplicate
 //print_r("Array of URLs:\n");
 $urlRenderered = 0;
@@ -73,4 +76,3 @@ function rendertronTheUrl($sUrl, $renderTronUrl, $renderMobile) {
     return $httpcode;
 }
 ?>
-
